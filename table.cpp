@@ -10,7 +10,7 @@ public:
     Node(int v) : value(v), next(nullptr) {}
 
     // TODO: allow HashTable to access private members
-    
+
 };
 
 class HashTable {
@@ -45,7 +45,15 @@ public:
 
     // TODO: Print the hash table
     void print() const {
-        
+        for (int i = 0; i < size; i++) {
+           cout << i << ": ";
+           Node* curr = table[i];
+           while (curr) {
+               cout << curr->value << " -> ";
+               curr = curr->next;
+           }
+           cout << "nullptr\n";
+       }
     }
 };
 
